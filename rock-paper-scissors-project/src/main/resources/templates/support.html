@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Play</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body class="container py-3">
+<header th:insert="~{/blocks/header :: header}"></header>
+<p th:text="'Hello, ' + ${name} + '!'" />
+<div class="p-5 text-center bg-body-tertiary rounded-3">
+
+  <h1 class="text-body-emphasis">The rules of the game are straightforward:</h1>
+  <ul class="col-lg-8 mx-auto fs-4 text-muted list-unstyled mt-5 ">
+    <li >Rock beats Scissors: Rock crushes Scissors.</li>
+    <li >Scissors beats Paper: Scissors cut Paper.</li>
+    <li >Paper beats Rock: Paper covers Rock.</li>
+  </ul>
+  <div>
+  <p>The rules of the "rock-paper-scissors" game, where one player makes a choice by pressing a button, and the second player, the computer, makes a choice automatically at the same time as the first player, but randomly, are quite simple:</p>
+    <ol  class="col-lg-8 mx-auto fs-5  mt-5 ">
+      <li>Two participants play the game: a human (the first player) and a computer (the second player).</li>
+      <li>Each participant makes their choice by pressing a button or indicating their selection.</li>
+      <li>Possible choices:
+      <ul  class=" mx-auto fs-6 list-unstyled ">
+        <li>Rock: represented by making a fist gesture.</li>
+        <li>Scissors: represented by showing a two-fingered gesture pointing forward.</li>
+        <li>Paper: represented by showing an open palm gesture.</li>
+      </ul>
+      </li>
+      <li>
+        The choices of the participants are evaluated as follows:
+        <ul  class="col-lg-8 mx-auto fs-6  list-unstyled  ">
+          <li>Rock defeats scissors (rock crushes scissors).</li>
+          <li>Scissors defeat paper (scissors cut paper).</li>
+          <li>Paper defeats rock (paper wraps rock).</li>
+        </ul>
+      </li>
+      <li>If both participants choose the same gesture, the game is considered a tie, and no one wins.</li>
+      <li>If a participant wins, they earn a certain number of points or a prize, depending on the game's rules.</li>
+      <li>The game continues until the participants decide to end it or a predetermined limit of rounds or points is reached.</li>
+    </ol>
+    <p>When the computer makes a choice automatically and randomly, the outcome will solely depend on the choice of the first player (human), as the computer does not use any strategies and makes a decision randomly. This makes the game simple and enjoyable for entertainment purposes.
+    </p>
+  </div>
+  <div class="d-inline-flex gap-2 mb-5 mt-5">
+    <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="submit">Start</button>
+  </div>
+</div>
+<footer th:insert="~{/blocks/footer :: footer}"></footer>
+</body>
+</html>
